@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="antonio88_order_notes-add_note_for_order"
+            instance="Antonio88\OrderNote\Observer\AddOrderNoteToOrder"
+        />
+    </event>
+</config>

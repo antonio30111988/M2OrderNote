@@ -1,0 +1,18 @@
+<?php
+/** @var Antonio88\OrderNote\Block\Order\OrderNote $block */
+?>
+
+<?php if ($block->isShowOrderNoteInAccount()) : ?>
+    <?php if ($block->getOrderNote()) : ?>
+    <div class="block block-order-note ordernote-block">
+        <div class="block-content">     
+            <div class="block-title">
+                <strong><?php /* @escapeNotVerified */ echo __('Order Note') ?></strong>
+            </div>          
+            <div class="box-content">
+                <?php echo $block->getOrderNoteHtml();?>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+<?php endif; ?>

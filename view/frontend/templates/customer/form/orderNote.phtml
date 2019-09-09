@@ -1,0 +1,24 @@
+
+<fieldset class="fieldset orderNote account" >
+    <legend class="legend">
+        <span><?php /* @escapeNotVerified */ echo __('Customer Default Order Note') ?></span>
+    </legend>
+    <p>
+    <div class="field regulation required">
+        <label for="code" class="label">
+            <span><?php /* @escapeNotVerified */ echo __('Order Note') ?></span>
+        </label>
+        <div class="control">
+            <textarea type="text"
+                      data-input="order_note"
+                      name="order_note"
+                      id="order_note"
+                      title="<?php /* @escapeNotVerified */ echo __('Order Note') ?>"
+                      class="input-text"
+                      data-validate="{required:false}">
+                <?= $block->escapeHtml($block->getCustomer()->getCustomAttribute('order_note')->getValue()) ?>
+            </textarea>
+        </div>
+    </div>
+    </p>
+</fieldset>

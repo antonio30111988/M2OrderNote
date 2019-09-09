@@ -1,0 +1,10 @@
+<?php if ($orderNote = $block->getOrderNote()) :?>
+    <section class="admin__page-section order-note">
+        <div class="admin__page-section-title">
+            <span class="title"><?php /* @noEscape */ echo __('Order Note') ?></span>
+        </div>
+        <div class="admin__page-section-content">
+            <?php /* @noEscape */ echo nl2br($block->escapeHtml($orderNote));?>
+        </div>
+    </section>
+<?php endif; ?>

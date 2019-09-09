@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Antonio88\OrderNote\Api\OrderNoteManagementInterface"
+                type="Antonio88\OrderNote\Model\OrderNoteManagement" />
+    <preference for="Antonio88\OrderNote\Api\GuestOrderNoteManagementInterface"
+                type="Antonio88\OrderNote\Model\GuestOrderNoteManagement" />
+    <preference for="Antonio88\OrderNote\Api\Data\OrderNoteInterface"
+             	type="Antonio88\OrderNote\Model\Data\OrderNote" />
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="order_note"
+				      xsi:type="string">sales_order.order_note
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <preference for="Magento\Customer\Block\Account\Dashboard\Info" type="Antonio88\OrderNote\Block\Account\Dashboard\Info" />
+</config>
