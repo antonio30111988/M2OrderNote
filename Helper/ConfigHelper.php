@@ -10,7 +10,7 @@ class ConfigHelper
     /**
      *  Config Paths
      */
-    private const XML_PATH_GENERAL_IS_SHOW_IN_MYACCOUNT = 'ordernote/general/is_show_in_myaccount';
+    private const XML_PATH_GENERAL_IS_SHOW_IN_MYACCOUNT = 'config_order_note/general/is_show_in_myaccount';
     private const XML_PATH_GLOBAL_DEFAULT_ORDER_NOTE = 'config_order_note/general/default_order_note';
 
     /**
@@ -42,7 +42,7 @@ class ConfigHelper
         return $this->scopeConfig->getValue(
             self::XML_PATH_GENERAL_IS_SHOW_IN_MYACCOUNT,
             ScopeInterface::SCOPE_STORE
-        );
+        ) === '1';
     }
 
     /**
