@@ -43,8 +43,8 @@ class OrderNoteHelper extends ConfigHelper
     {
         $customer = $this->getCustomerData();
         if ($customer) {
-            if ($customerDefaultOrderNote = $customer->getCustomAttribute(OrderNote::ORDER_NOTE_FIELD_NAME)->getValue()) {
-                return $customerDefaultOrderNote;
+            if ($customer->getCustomAttribute(OrderNote::ORDER_NOTE_FIELD_NAME)) {
+                return trim($customer->getCustomAttribute(OrderNote::ORDER_NOTE_FIELD_NAME)->getValue());
             }
             return $this->getGlobalDefaultOrderNote();
         }
