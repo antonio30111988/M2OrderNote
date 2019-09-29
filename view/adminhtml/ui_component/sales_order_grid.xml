@@ -2,7 +2,7 @@
 
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <columns name="sales_order_columns">
-        <column name="order_note">
+        <column name="order_note" class="Antonio88\OrderNote\UI\OrderGrid\Component\Listing\Column\OrderNote">
             <argument name="data" xsi:type="array">
                 <item name="js_config" xsi:type="array">
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/column</item>
@@ -11,6 +11,8 @@
                     <item name="filter" xsi:type="string">text</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="label" xsi:type="string" translate="true">Order Note</item>
+                    <item name="sortable" xsi:type="boolean">true</item>
+                    <item name="sortOrder" xsi:type="number">6</item>
                 </item>
             </argument>
         </column>

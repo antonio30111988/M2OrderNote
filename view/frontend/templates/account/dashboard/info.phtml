@@ -28,9 +28,9 @@
             </strong>
             <div class="box-content">
                 <p>
-                    <?= $block->escapeHtml($block->getCustomer()->getCustomAttribute('order_note') ?
-                        trim($block->getCustomer()->getCustomAttribute('order_note')->getValue()) : '') ?>
                     <br>
+                    <?= $block->escapeHtml($block->getCustomer()->getExtensionAttributes()->getOrderNote() ?
+                        trim($block->getCustomer()->getExtensionAttributes()->getOrderNote()) : '') ?>
                 </p>
             </div>
             <br>

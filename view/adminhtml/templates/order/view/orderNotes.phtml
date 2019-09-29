@@ -1,9 +1,9 @@
 <?php
-/** @var Antonio88\OrderNote\Block\Adminhtml\Order\View\Info $block */
+/** @var Magento\Sales\Block\Adminhtml\Order\View\Info $block */
 ?>
  
 <tr>
     <th><?= $block->escapeHtml(__('Order Note')) ?></th>
-    <td><span id="order_status"><?php /* @noEscape */ echo nl2br($block->escapeHtml($block->getOrder()->getData(\Antonio88\OrderNote\Model\Data\OrderNote::ORDER_NOTE_FIELD_NAME)));?></span></td>
+    <td><span id="order_status"><?php /* @noEscape */ echo nl2br($block->escapeHtml($block->getOrder()->getExtensionAttributes()->getOrderNote() ?? '-'));?></span></td>
 </tr>
 
