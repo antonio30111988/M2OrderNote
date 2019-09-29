@@ -17,4 +17,11 @@
             </argument>
         </arguments>
     </virtualType>
+
+    <type name="Magento\Customer\Api\CustomerRepositoryInterface">
+        <plugin disabled="false" name="add_order_note_to_customer_repository" type="Antonio88\OrderNote\Plugin\CustomerRepositoryPlugin"/>
+    </type>
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin disabled="false" name="add_order_note_to_order_repository" type="Antonio88\OrderNote\Plugin\OrderRepositoryPlugin"/>
+    </type>
 </config>
