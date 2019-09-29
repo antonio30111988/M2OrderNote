@@ -1,10 +1,9 @@
-<?php if ($orderNote = $block->getOrderNote()) :?>
-    <section class="admin__page-section order-note">
-        <div class="admin__page-section-title">
-            <span class="title"><?php /* @noEscape */ echo __('Order Note') ?></span>
-        </div>
-        <div class="admin__page-section-content">
-            <?php /* @noEscape */ echo nl2br($block->escapeHtml($orderNote));?>
-        </div>
-    </section>
-<?php endif; ?>
+<?php
+/** @var Antonio88\OrderNote\Block\Adminhtml\Order\View\Info $block */
+?>
+ 
+<tr>
+    <th><?= $block->escapeHtml(__('Order Note')) ?></th>
+    <td><span id="order_status"><?php /* @noEscape */ echo nl2br($block->escapeHtml($block->getOrder()->getData(\Antonio88\OrderNote\Model\Data\OrderNote::ORDER_NOTE_FIELD_NAME)));?></span></td>
+</tr>
+
