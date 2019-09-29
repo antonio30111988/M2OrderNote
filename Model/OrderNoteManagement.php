@@ -54,7 +54,7 @@ class OrderNoteManagement implements OrderNoteManagementInterface
             $orderNote = $orderNote->getOrderNote();
             $quote->setData(OrderNote::ORDER_NOTE_FIELD_NAME, strip_tags($orderNote));
             
-             $this->cartQuoteRepository->save($quote);
+            $this->cartQuoteRepository->save($quote);
         } catch (\Exception $e) {
                throw new CouldNotSaveException(
                    __('Cannot save the order note.')
