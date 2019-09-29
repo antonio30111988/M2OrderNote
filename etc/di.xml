@@ -17,6 +17,4 @@
             </argument>
         </arguments>
     </virtualType>
-
-    <preference for="Magento\Customer\Block\Account\Dashboard\Info" type="Antonio88\OrderNote\Block\Account\Dashboard\Info" />
 </config>

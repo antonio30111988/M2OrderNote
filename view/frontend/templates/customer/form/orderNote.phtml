@@ -16,7 +16,8 @@
                       title="<?php /* @escapeNotVerified */ echo __('Order Note') ?>"
                       class="input-text"
                       data-validate="{required:false}">
-                <?= $block->escapeHtml($block->getCustomer()->getCustomAttribute('order_note')->getValue()) ?>
+                 <?= $block->escapeHtml($block->getCustomer()->getCustomAttribute('order_note') ?
+                     trim($block->getCustomer()->getCustomAttribute('order_note')->getValue()) : '') ?>
             </textarea>
         </div>
     </div>

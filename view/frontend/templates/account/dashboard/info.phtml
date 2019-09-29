@@ -24,11 +24,13 @@
             </div>
             <br>
             <strong class="box-title">
-                <span><?= $block->escapeHtml(__('Default Order Dsiplay Note')) ?></span>
+                <span><?= $block->escapeHtml(__('Default Order Display Note')) ?></span>
             </strong>
             <div class="box-content">
                 <p>
-                    <?= $block->escapeHtml($block->getCustomer()->getCustomAttribute('order_note')->getValue()) ?><br>
+                    <?= $block->escapeHtml($block->getCustomer()->getCustomAttribute('order_note') ?
+                        trim($block->getCustomer()->getCustomAttribute('order_note')->getValue()) : '') ?>
+                    <br>
                 </p>
             </div>
             <br>

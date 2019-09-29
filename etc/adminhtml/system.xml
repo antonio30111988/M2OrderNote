@@ -2,26 +2,8 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="ordernote_extension" translate="label" sortOrder="999999">
-            <label>Order Note Extensions</label>
-        </tab>  	
-        <section id="ordernote" translate="label" type="text" sortOrder="435" showInDefault="1" showInWebsite="1" showInStore="1">
-            <class>separator-top</class>
-            <label>Checkout Order Note</label>
-            <tab>ordernote_extension</tab>
-            <resource>Antonio88_OrderNote::config_ordernote</resource>
-            <group id="general" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
-                <label>General</label>
-                <field id="is_show_in_myaccount" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Show order notes in customer account?</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                   <comment>If "Yes" the order note will show on customer account"</comment>
-                </field>
-            </group>
-        </section>
-
         <tab id="config_order_note" translate="label" sortOrder="999999">
-            <label>Config</label>
+                <label>Order Note Extension</label>
         </tab>
         <section id="config_order_note" translate="label" type="text" sortOrder="535" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
@@ -29,11 +11,16 @@
             <tab>config_order_note</tab>
             <resource>Antonio88_OrderNote::config_ordernote</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
-                <label>Default Order note</label>
+                <label>Configuration</label>
                 <field id="default_order_note" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Default order note</label>
                     <source_model>Antonio88\OrderNote\Model\Config\Source\DefaultSelectionOrderNote</source_model>
                     <comment>This is a global order note which displays under order summary in Admin and Customer Account Order View in case that default customer account order note and order specific order note are empty.</comment>
+                </field>
+                <field id="is_show_in_myaccount" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Show order note for order preview in customer account?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If "Yes" the order note will show for each order on customer account"</comment>
                 </field>
             </group>
         </section>
